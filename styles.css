@@ -3,6 +3,30 @@ table, th, td {
     border-collapse: collapse;
 }
 
+td{
+    text-align: center;
+}
+
 h1, h2, h3, h4{
     font-family:Arial, Helvetica, sans-serif
+}
+
+.button{
+    background-color: #999999;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.button:hover{
+    background-color: #AAAAAA;
+}
+
+.button:active{
+    background-color: #666666;
 }
