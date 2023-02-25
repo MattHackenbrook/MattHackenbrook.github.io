@@ -10,7 +10,7 @@ $(document).ready(function(){
         var imgVal = $("#FakePeople").find("img");
         // Make an AJAX call to get the image file
         $.ajax({
-            url: "C:\\Users\\Matthew\\Desktop\\CCPS530_Lab4\\FakePeople\\" + ImageArr[Index],
+            url: "https://github.com/MattHackenbrook/MattHackenbrook.github.io/tree/main/FakePeople/" + ImageArr[Index],
             dataType: "binary",
             responseType: "arraybuffer",
             success: function (data) {
