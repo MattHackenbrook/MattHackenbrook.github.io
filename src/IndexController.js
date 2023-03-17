@@ -46,17 +46,17 @@ $(function(){
         Index = (Index + 1) % ImageLocs.length;
     }
 
-    $.get("FakePeople", function(data, status){
-        $(data).find("a").each(function(){
-            var fileName = $(this).attr("href");
-            if(fileName != "/"){
-                ImageLocs.push(fileName);
-            }
-        });
-    }).done(function(){
-        CycleImage();
-        setInterval(CycleImage, 20000);
-    });
+    //$.get("FakePeople", function(data, status){
+    //    $(data).find("a").each(function(){
+    //        var fileName = $(this).attr("href");
+    //        if(fileName != "/"){
+    //            ImageLocs.push(fileName);
+    //        }
+    //    });
+    //}).done(function(){
+    //    CycleImage();
+    //    setInterval(CycleImage, 20000);
+    //});
 
     $.get("mercedes.json", function(data, status){
         console.log(data);
