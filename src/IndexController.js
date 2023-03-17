@@ -57,4 +57,25 @@ $(function(){
         CycleImage();
         setInterval(CycleImage, 20000);
     });
+
+    $.get("mercedes.json", function(data, status){
+        console.log(data);
+        var fig = $('#MercedesPic');
+        fig.find('img').attr('src', data.imageURL);
+        fig.find('figcaption').append(data.name + ", " + data.year);
+        var engine = $('#MercedesEngine');
+        var engineText = "<h4>Engine</h4>" +
+        "<ul><li>Type: " + data.engine.type +
+        "</li><li>Size: " + data.engine.size +
+        "</li><li>Configuration: " + data.engine.configuration + "</li></ul>";
+        console.log(engineText);
+        engine.append(engineText);
+        var brakes = $('#MercedesBrakes');
+        var brakeText = "<h4>Brakes</h4>" +
+        "<ul><li>Front: " + data.brakes.front +
+        "</li><li>Back: " + data.brakes.back + "</li></ul>";
+        console.log(brakeText)
+        brakes.append(brakeText);
+    });
+
 });
